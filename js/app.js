@@ -154,7 +154,6 @@ const displayLikedPosts = () => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
   });
-  likedPosts[0].pop();
 };
 
 const displayReportedPosts = () => {
