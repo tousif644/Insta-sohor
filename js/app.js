@@ -28,8 +28,9 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-  return text.length === 30 ? "text" : text.slice(0, 31) + "<span class='fw-bold'>... read more</span>";
-  
+  return text.length === 30
+    ? "text"
+    : text.slice(0, 31) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
@@ -89,7 +90,9 @@ const createPost = (post) => {
               <div class="post__footer">
                 <div class="post__buttons">
                   <button class="post__button" onclick="addToLiked(${post.id})">
-                  <i class="fa-solid fa-heart ${isLiked(post.id) && "text-danger"}"></i>
+                  <i class="fa-solid fa-heart ${
+                    isLiked(post.id) && "text-danger"
+                  }"></i>
                     
                   </button>
                   <button class="post__button">
@@ -162,7 +165,6 @@ const displayReportedPosts = () => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
-
 };
 
 const loadPosts = async () => {
